@@ -1,11 +1,10 @@
-
-87. Basic Arithmetic and the Modulo Operator in Javascript:
+// 87. Basic Arithmetic and the Modulo Operator in Javascript:
 
   var dogAge = prompt("How old is your dog?");
   var humanAge = ((dogAge - 2) * 4) + 21;
   alert("Your dog is age " + dogAge + " in dog years, but " + humanAge + " in human years!")
 
-90. Functions (https://stanford.edu/~cpiech/karel/ide.html)
+// 90. Functions (https://stanford.edu/~cpiech/karel/ide.html)
 
 function main(){
 
@@ -13,7 +12,6 @@ topRight ();
 topRight ();
 topRight ();
 topRight ();
-
 
 }
 
@@ -34,3 +32,64 @@ function topRight(){
    moveFourTimes();
    turnLeft();
 }
+
+// 90.1 Functions with Beeper
+
+function main(){
+
+putBeeper();
+moveUp ();
+moveUp ();
+moveUp ();
+moveUp ();
+
+}
+
+function moveUp(){
+   move();
+   turnLeft();
+   move();
+   turnRight();
+   putBeeper();
+}
+
+// 90.2 Functions Chess Board
+
+function main(){
+
+putBeeper();
+movePlace();
+movePlace2();
+movePlace();
+movePlace2();
+movePlace();
+
+}
+
+function movePlace(){
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   turnLeft();
+}
+
+function movePlace2(){
+   move();
+   turnLeft();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   turnRight();
+   move();
+   turnRight();
+
+}
+
+
