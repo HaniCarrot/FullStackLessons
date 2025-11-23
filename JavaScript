@@ -92,4 +92,83 @@ function movePlace2(){
 
 }
 
+90. Parameters and Arguments - Math.floor rounding down
 
+function getMilk(money) {   
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+
+  var numberOfBottles = Math.floor(money / 1.5);
+    
+  console.log("buy " + numberOfBottles + " bottles of milk");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+}
+
+getMilk(5); 
+
+94. Life in Weeks Exercise
+
+function lifeInWeeks(age) {
+    
+    var yearsRemaining = 90 - age;
+    var days = yearsRemaining * 365;
+    var weeks = yearsRemaining * 52;
+    var months = yearsRemaining * 12;
+
+    console.log("You have " + days + " days, " + weeks + " weeks, and " + months + " months left.")
+    
+}
+
+lifeInWeeks(12);
+
+95. Functions: Outputs & Return Value
+
+function getMilk(money) {   
+    
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("buy " + calcBottles(money, 1.5) + " bottles of milk");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+
+  return money % 1.5;
+} 
+
+  function calcBottles(startingMoney, costPerBottle) {
+
+  var numberOfBottles = Math.floor(startingMoney / costPerBottle);
+  return numberOfBottles;
+}
+
+console.log("Hello master, here is your " + getMilk(5) + " change.");
+
+96. BMI Calculator
