@@ -172,3 +172,9 @@ function getMilk(money) {
 console.log("Hello master, here is your " + getMilk(5) + " change.");
 
 96. BMI Calculator
+
+function bmiCalculator(weight, height) {
+  return Math.round(weight / (height * height));
+}
+
+var bmi = bmiCalculator(65, 1.8);
