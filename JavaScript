@@ -1,4 +1,4 @@
-//86. String Casing Solution
+86. String Casing Solution
 
 //1 Create a var that stores the name the user enters via prompt.
 var yourName = prompt("What is your name?");
@@ -24,13 +24,13 @@ alert("Hello, " + capitalisedName + ".");
 
 //Results: Hello, Name.
 
-// 87. Basic Arithmetic and the Modulo Operator in Javascript:
+87. Basic Arithmetic and the Modulo Operator in Javascript:
 
   var dogAge = prompt("How old is your dog?");
   var humanAge = ((dogAge - 2) * 4) + 21;
   alert("Your dog is age " + dogAge + " in dog years, but " + humanAge + " in human years!")
 
-// 90. Functions (https://stanford.edu/~cpiech/karel/ide.html)
+90. Functions (https://stanford.edu/~cpiech/karel/ide.html)
 
 function main(){
 
@@ -59,7 +59,7 @@ function topRight(){
    turnLeft();
 }
 
-// 90.1 Functions with Beeper
+90.1 Functions with Beeper
 
 function main(){
 
@@ -79,7 +79,7 @@ function moveUp(){
    putBeeper();
 }
 
-// 90.2 Functions Chess Board
+90.2 Functions Chess Board
 
 function main(){
 
@@ -204,3 +204,56 @@ function bmiCalculator(weight, height) {
 }
 
 var bmi = bmiCalculator(65, 1.8);
+
+96.1 BMI Alternative
+
+function bmiCalculator(weight, height) {
+var bmi = weight / Math.pow(height, 2);
+return Math.round(bmi);
+}
+
+var bmi = bmiCalculator(65, 1.8);
+console.log(bmi);
+
+
+97. Random Number Generation in Javascript
+
+var n = Math.random();
+n = n * 6;
+n = Math.floor(n);
+console.log(n);
+
+// Will never show 5
+
+var n = Math.random();
+n = n * 6;
+n = Math.floor(n) + 1;
+console.log(n);
+
+//Pseudo Number Generation, will show between 1-5
+
+98. Love Calculator
+
+prompt("What is your name?");
+prompt("What is their name?");
+
+var loveScore = Math.random() * 100;
+loveScore = Math.floor(loveScore) + 1;
+
+if(loveScore > 90) {
+    alert("Your lovescore is " + loveScore + "%. You are madly deeply in love");
+}
+
+if(loveScore > 60 && loveScore <= 90) {
+    alert("Your lovescore is " + loveScore + "%.");
+}
+
+if(loveScore > 30 && loveScore <= 60) {
+    alert("Your lovescore is " + loveScore + "%.");
+}
+
+if(loveScore <= 30) {
+    alert("Your lovescore is " + loveScore + "%. Would you even call that love?");
+}
+
+99. 
