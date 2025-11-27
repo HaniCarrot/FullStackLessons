@@ -1,3 +1,29 @@
+//86. String Casing Solution
+
+//1 Create a var that stores the name the user enters via prompt.
+var yourName = prompt("What is your name?");
+
+//2 Capitalise the first letter of their name.
+//a Isolate first character
+var firstChar = yourName.slice(0,1);
+
+//b Turn the first char to uppercase
+var upperCaseFirstChar = firstChar.toUpperCase();
+
+//c Isolate the rest of the name
+var restOfName = yourName.slice(1,yourName.length);
+
+//d Change the rest of name to lowercase
+restOfName = restOfName.toLowerCase();
+
+//e Concactenate the first char with the rest of the chars
+var capitalisedName = upperCaseFirstChar + restOfName;
+
+//3 We use the capitalised version of their name to greet them using an alert.
+alert("Hello, " + capitalisedName + ".");
+
+//Results: Hello, Name.
+
 // 87. Basic Arithmetic and the Modulo Operator in Javascript:
 
   var dogAge = prompt("How old is your dog?");
