@@ -1,4 +1,4 @@
-86. String Casing Solution
+1. String Casing Solution
 
 //1 Create a var that stores the name the user enters via prompt.
 var yourName = prompt("What is your name?");
@@ -24,13 +24,13 @@ alert("Hello, " + capitalisedName + ".");
 
 //Results: Hello, Name.
 
-87. Basic Arithmetic and the Modulo Operator in Javascript:
+2. Basic Arithmetic and the Modulo Operator in Javascript:
 
   var dogAge = prompt("How old is your dog?");
   var humanAge = ((dogAge - 2) * 4) + 21;
   alert("Your dog is age " + dogAge + " in dog years, but " + humanAge + " in human years!")
 
-90. Functions (https://stanford.edu/~cpiech/karel/ide.html)
+3. Functions (https://stanford.edu/~cpiech/karel/ide.html)
 
 function main(){
 
@@ -59,7 +59,7 @@ function topRight(){
    turnLeft();
 }
 
-90.1 Functions with Beeper
+3.1 Functions with Beeper
 
 function main(){
 
@@ -79,7 +79,7 @@ function moveUp(){
    putBeeper();
 }
 
-90.2 Functions Chess Board
+3.2 Functions Chess Board
 
 function main(){
 
@@ -118,7 +118,7 @@ function movePlace2(){
 
 }
 
-90. Parameters and Arguments - Math.floor rounding down
+4. Parameters and Arguments - Math.floor rounding down
 
 function getMilk(money) {   
   console.log("leaveHouse");
@@ -147,7 +147,7 @@ function getMilk(money) {
 
 getMilk(5); 
 
-94. Life in Weeks Exercise
+5. Life in Weeks Exercise
 
 function lifeInWeeks(age) {
     
@@ -162,7 +162,7 @@ function lifeInWeeks(age) {
 
 lifeInWeeks(12);
 
-95. Functions: Outputs & Return Value
+6. Functions: Outputs & Return Value
 
 function getMilk(money) {   
     
@@ -197,7 +197,7 @@ function getMilk(money) {
 
 console.log("Hello master, here is your " + getMilk(5) + " change.");
 
-96. BMI Calculator
+7. BMI Calculator
 
 function bmiCalculator(weight, height) {
   return Math.round(weight / (height * height));
@@ -216,7 +216,7 @@ var bmi = bmiCalculator(65, 1.8);
 console.log(bmi);
 
 
-97. Random Number Generation in Javascript
+8. Random Number Generation in Javascript
 
 var n = Math.random();
 n = n * 6;
@@ -232,7 +232,7 @@ console.log(n);
 
 //Pseudo Number Generation, will show between 1-5
 
-98. Love Calculator
+9. Love Calculator
 
 prompt("What is your name?");
 prompt("What is their name?");
@@ -256,4 +256,114 @@ if(loveScore <= 30) {
     alert("Your lovescore is " + loveScore + "%. Would you even call that love?");
 }
 
-99. 
+10. Notes on Comparators
+
+=== Is equal to
+!== Is not equal to
+> Is greater than
+< Is lesser than
+>= Is greater or equal to
+<= Is lesser or equal to
+&& AND
+|| OR
+! NOT
+
+11. BMI Calculator Advanced (IF/ELSE)
+
+function bmiCalculator (weight, height) {
+
+    var bmi = Math.round(weight / Math.pow(height,2));
+    var interpretation;
+
+if(bmi < 18.5) {
+    return "Your BMI is " + bmi + ", so you are underweight.";
+}
+
+else if (bmi >= 18.5 && bmi <= 24.9) {
+    return "Your BMI is " + bmi + ", so you have a normal weight.";
+}
+
+else {
+    return "Your BMI is " + bmi + ", so you are overweight.";
+}
+
+    return interpretation;
+}
+
+12. Leap Year Coding Challenge
+
+function isLeap(year) {
+    
+/**************Don't change the code above****************/    
+    
+    //Write your code here.
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return "Leap year.";
+    } else {
+        return "Not leap year.";
+    }
+
+/**************Don't change the code below****************/    
+
+}
+
+12.1 alt solution
+
+function isLeap(year) {
+    
+/**************Don't change the code above****************/    
+    
+  if (year % 4 === 0) {
+    if (year % 100 --- 0) {
+      if (year % 400 === 0) {
+        return "Leap year.";
+      } else {
+          return "Not leap year.";
+      }
+    } else {
+        return "Leap year.";
+    }
+  } else {
+      return "Not leap year.";
+  }
+      
+/**************Don't change the code below****************/    
+
+}
+
+13. Arrays
+
+var guestList = ["Jack", "Joe", "Pam", "Alex", "Luke", "Carrot", "Hannah"];
+
+console.log(guestList.length);       //Will show guestlist length
+console.log(guestList[0]);           //Will choose specific
+eggs.includes(4)                     //If it includes that one, it'll show back true or false
+
+13.1 Exercise
+
+var guestList = ["Jack", "Joe", "Pam", "Alex", "Luke", "Carrot", "Hannah"];
+
+var lowerGuestName = guestName.toLowerCase();
+var lowerGuestList = guestList.map(name => name.toLowerCase());
+
+var guestName = prompt("What is your name?")
+
+if (lowerGuestList.includes(lowerGuestName)) {
+    alert("Welcome.");
+} else {
+    alert("You are not welcome here.");
+}
+
+13.2 Shortened version
+
+var guestList = ["Jack", "Joe", "Pam", "Alex", "Luke", "Carrot", "Hannah"];
+
+var guestName = prompt("What is your name?");
+
+if (guestList.some(name => name.toLowerCase() === guestName.toLowerCase())) {
+    alert("Welcome.");
+} else {
+    alert("You are not welcome here.");
+}
+
+14. 
