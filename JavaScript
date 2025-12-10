@@ -447,3 +447,64 @@ if (count % 3 === 0 && count % 5 === 0) {
 }}
 
 fizzBuzz();
+
+18. Beer on the wall
+
+var word = "bottles";
+var count = 99;
+while (count > 0) {
+    console.log(count + " " + word + " of beer on the wall");
+    console.log(count + " " + word + " of beer,");
+    console.log("Take one down, pass it around,");
+    count = count - 1;
+    if (count > 0) {
+        console.log(count + " " + word + " of beer on the wall.");
+    } else {
+        console.log("No more " + word + " of beer on the wall.");
+    }
+}
+
+18.1 Alternative (provided by udemy)
+
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottle";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottles";
+    } 
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+	numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
+
+19. For Loops
+
+for (i=0; i<2; i++) {
+//Do something
+}
+
+  i=0; defines the start of the loop
+  i<2; defines the end of the loop
+  i++ defines the change of the loop
+
+Syntactic Sugar - Sweetens the syntax and makes it easier
+
+for(var i=1; i<2; i++) {
+console.log(i);
+}
+
+20. WHEN TO USE FOR/WHILE
+
+while (something is true) {
+//do something
+}
+
+-- Checking for a state
+
+for (i=0; i<2; i++) {
+//do something
+}
+
+-- Trying to iterate. Run a piece of code many times.
