@@ -534,6 +534,110 @@ return output;
     
 }
 
-22. 
+22. Adding JavaScript to Websites
+
+	- Position of <script> tag matters a lot. CSS always goes at the top, but JavaScript should be right at the end before the closing </body> tag.
+
+22.1 INLINE Javascript - not very modular, difficult to debug, and generally not good practice. Try to avoid inline Javascript when possible.
+
+> When you have quotation marks inside quotation marks, downgrade to single quotation mark (example below)
+
+        <body onload="alert('Hello');">
+
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="alert('Hello');">
+        <h1>Hello</h1>
+    </body>
+
+</html>
+
+22.2 INTERNAL Javascript - Utilising <script> inside the code, example below. 
 
 
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Hello</h1>
+
+    <script type="text/javascript">
+    alert("Hello");
+    </script>
+    
+    </body>
+
+</html>
+
+22.3 EXTERNAL FILE Javascript - This is adding JS as an external file. The only code inside the HTML file will be the <script> tag with an arc attribute to specify the location of the external JavaScript file.
+
+Create a file called "index.js"
+
+Example of script tag:     <script src="index.js" charset="utf-8"></script>
+
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Hello</h1>
+
+    <script src="index.js" charset="utf-8"></script>
+    </body>
+
+</html>
+
+23. DOM
+
+> DOM (Document Object Model):
+Represents a web page as a tree of objects
+
+> Why DOM is needed:
+HTML/CSS alone make static websites
+Interactive websites need dynamic changes (clicks, updates, styles)
+
+> How DOM works:
+Browser converts HTML into a DOM tree when page loads
+Every element becomes an object
+All elements are inside the document object
+Elements have parent, child, sibling relationships
+
+> Accessing the DOM (JavaScript):
+document → whole page
+document.firstElementChild → <html>
+document.lastElementChild → <body>
+document.querySelector() → selects elements easily
+
+> Manipulating elements:
+Change content: element.innerHTML = "Text"
+Change style: element.style.color = "red"
+Trigger actions: element.click()
+
+> Objects in the DOM:
+Properties: describe things (e.g. innerHTML, style)
+Methods: perform actions (e.g. click(), appendChild())
+
+> Dot notation:
+Get/set property → object.property
+Call method → object.method()
+
+Key idea:
+JavaScript uses the DOM to select, change, and control web page elements without reloading the page
