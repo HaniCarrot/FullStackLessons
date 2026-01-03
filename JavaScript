@@ -641,3 +641,13 @@ Call method → object.method()
 
 Key idea:
 JavaScript uses the DOM to select, change, and control web page elements without reloading the page
+
+24. Challenge - "Download the provided files: index.html, index.js, and styles.css. Without modifying the HTML file, use the console to select the third list item (li) and change its text from "Third" to your name or any text you prefer."
+
+Solution is either of the two below:
+
+1) document.firstElementChild.lastElementChild.querySelector("ul").lastElementChild.innerHTML = "Hannah";
+
+2) document.querySelectorAll("li")[2].textContent = "Hannah";
+
+25. 
