@@ -650,4 +650,47 @@ Solution is either of the two below:
 
 2) document.querySelectorAll("li")[2].textContent = "Hannah";
 
-25. 
+25. Selecting HTML Elements with Javascript (EXAMPLES)
+
+document.getElementById("title");
+<h1 id="title">
+
+document.getElementById("title").innerHTML = "good bye";
+"good bye" 					> Changes the title to good bye instead of Hello
+
+SELECTORS:
+Part that we specify before curly bracers. Examples:
+
+For elements, write the name of the element (body, p, h1, etc)
+For classes we add a dot (.) infront of the name of the class
+For ID we add the pound sign (#)
+
+With selectors we can combine certain things, Examples:
+ID with Class - #title .container-fluid
+Class with Element, etc
+
+With selection we can put in an element, class or ID.
+document.querySelector("h1");
+document.querySelector("#title");
+document.querySelector(".btn");
+
+Can also combine to find specific, for example finding a link within the list
+document.querySelector("li a");
+
+element with class of item and also li
+document.querySelector("li.list");
+
+When combining things that occur in the same element, there are no spaces.
+
+If you want all objects that match a selector (for example all 3 li ) then you use a slightly different method.
+Instead of querySelector, use querySelectorAll
+EG -	document.querySelectorAll("#list .item");
+
+Using this would change the element in #list + a (anchor) to the colour red:
+
+document.querySelectorAll("#list a") [0].style.color = "red";
+
+Using this would change the element labelled "title" to red:
+
+document.querySelector("title").style.color = "red"; 
+
