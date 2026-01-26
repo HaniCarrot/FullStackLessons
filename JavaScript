@@ -692,5 +692,4 @@ document.querySelectorAll("#list a") [0].style.color = "red";
 
 Using this would change the element labelled "title" to red:
 
-document.querySelector("title").style.color = "red"; 
-
+document.querySelector("title").style.color = "red";
