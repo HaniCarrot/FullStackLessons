@@ -702,4 +702,15 @@ All dom styles found here: https://www.w3schools.com/jsref/dom_obj_style.asp
 
 >Values HAVE to be represented as strings with JavaScript
 
+document.querySelector("button").classList.add("invisible"); 
+- this wouild then add invisible as a class button alongside btn
+this then allows us to create a separate style in html for .invisible
+
+you can then turn it on and off in the console by typing:
+document.querySelector("button").classList.toggle("invidible");
+
+document.querySelector("h1").innerHTML = "<em>Good Bye</em>"; (this would then add <em></em> into the good bye section of h1 code
+
+
+
 
