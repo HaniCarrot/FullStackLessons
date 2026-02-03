@@ -1,1 +1,55 @@
 
+Event Listener to allow buttons to know when a user clicks
+
+Inside index.js you want to add a function that does something when button gets clicked
+
+> For example, adding the following would mean when you click the first button it will pop up with an alert
+
+  document.querySelector("button").addEventListener("click", handleClick);
+
+  function handleClick() {
+      alert("I got clicked!");
+  }
+
+> OR for "anonymous function"
+
+  document.querySelector("button").addEventListener("click", function () {
+     alert("I got clicked!");
+  });
+
+> Code to then alert when clicking all buttons rather than just the first
+
+Example A, cleanest version)
+  document.querySelectorAll("button").forEach(function (button) {
+    button.addEventListener("click", function () {
+      alert("I got clicked!");
+    });
+  });
+
+Example B)
+  var buttons = document.querySelectorAll("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      alert("I got clicked!");
+    });
+  }
+
+Example C, coursework exact answer)
+  var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+  
+  for (var i = 0; i<numberOfDrumButtons; i++) {
+
+    document.querySelectorAll(".drum") [i].addEventListener("click", function () {
+        alert("I got clicked!");
+    });
+
+  }
+
+> For adding two Event Listeners (this is adding to the wiki page for example)
+
+  £0.addEventListener(input1, input2);
+  function respondToClick() {
+  console.log("I got clicked");
+  }
+
