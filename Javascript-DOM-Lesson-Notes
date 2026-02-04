@@ -53,3 +53,30 @@ Example C, coursework exact answer)
   console.log("I got clicked");
   }
 
+
+> Higher Order Function Challenge Solution
+
+function add(num1, num2) {
+return num1 + num2;
+}
+ 
+function subtract(num1, num2) {
+return num1 - num2;
+}
+ 
+function multiply(num1, num2) {
+return num1 * num2;
+}
+ 
+function divide(num1, num2) {
+return num1 / num2;
+}
+ 
+function calculator(num1, num2, operator) {
+return operator(num1, num2);
+}
+
+> Adding Audio to JavaScript
+
+  var audio = new Audio('sounds/tom-1.mp3');
+  audio.play();
