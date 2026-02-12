@@ -80,3 +80,99 @@ return operator(num1, num2);
 
   var audio = new Audio('sounds/tom-1.mp3');
   audio.play();
+
+> JavaScript Objects
+
+How to make them clear & concise:
+
+Doing this would work, but it's cluttered if you have multiple 'bellboys'
+
+  var bellBoy1Name = "Timmy";
+  var bellBoy1Age = 19;
+  var bellBoy1HasWorkPermit = true;
+  var bellBoy1Languages = [
+    "French",
+    "English"
+    ]
+
+So the easier way would to create a JavaScript object like so:
+
+  var bellBoy1 = {
+    name: "Timmy",
+    age: 19,
+    hasWorkPermit: true,
+    languages: ["French", "English"]
+  }
+
+Challenge:
+
+  var houseKeeper1 = {
+    yearsOfExperience: 12,
+    name: "Jane",
+    cleaningRepertoire: ["bathroom", "lobby", "bedroom"]
+  }
+
+Factory in JS Code:
+
+  function BellBoy (name, age, hasWorkPermit, languages) {
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
+  }
+
+  var bellBoy1 = new BellBoy("Timmy", 19, true, ["French, "English"]);
+  var bellBoy1 = new BellBoy("Jimmy", 21, false, ["English", "German"]);
+
+> Methods:
+
+  var bellBoy1 = {
+    name: "Timmy",
+    age: 19,
+    hasWorkPermit: true,
+    languages: ["French", "English"],
+    moveSuitcase: function() {
+      alert("May I take your suitcase?");
+      pickUpSuitcase();
+      move();
+    }
+  }
+
+  bellBoy1.moveSuitcase();
+
+> Constructor Function
+
+  function BellBoy (name, age, hasWorkPermit, languages) {
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
+    this.moveSuitcase = function() {
+      alert("May I take your suitcase?");
+      pickUpSuitcase();
+      move();
+    }
+  }
+
+> Constructor Function for Audio
+
+  function Audio (fileLocation) {
+    this.fileLocation = fileLocation;
+    this.play = function() {
+      //Tap into the audio hardware
+      //Check the file at fileLocation exists
+      //Check the file at fileLocation is a sound file
+      //Play the file at fileLocation
+      }
+  }
+
+  var tom1 = new Audio("sounds/tom-1.mp3");
+  tom1.play();
+
+> TL;DR keypress is now deprecated, you should use keydown instead.
+
+Just a quick heads up, as technology moves incredibly fast, 
+every week or so something else will change. 
+This is just a quick reminder that in the next lesson, 
+when we cover detecting key presses, you should be 
+using the keydown event listener instead of keypress.
