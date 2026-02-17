@@ -184,3 +184,14 @@ using the keydown event listener instead of keypress.
   function respondToKey(event){
    console.log("Key pressed.");
   }
+
+> Adding animation (shadow) to buttons, including a timeout for after the button's pressed.
+
+  function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+  
+    setTimeout(function () {
+      activeButton.classList.remove("pressed");
+    }, 100);
+  }
