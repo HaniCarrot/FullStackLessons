@@ -1,2 +1,77 @@
-> What is JQuery?
+> How to incorporate jQuery into websites
+
+https://developers.google.com/speed/libraries#jquery
+add the first snippet from this library ABOVE your js script in html (as follows)
+
+  <body>
   
+  <h1>Hello.</h1>
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="index.js" charset="utf-8"></script>
+  </body>
+
+this will then allow the following jQuery command to change the h1 text to red
+
+  $("h1").css("color", "red");
+
+> Console logging to find something out. 
+You could put the following in the js file, and when you open the web page it'll show the colour of the h1. 
+Can do the same for something like font-size
+
+  console.log($("h1").css("color"));
+  
+  $("button");
+
+> If you have a SINGLE property, for example below, then you're getting the value
+
+  console.log($("h1").css("color"));
+
+> If you have two properties, you are setting the value
+
+  $("h1").css("color", "red");
+
+> In general, keep the JavaScript code all about behaviour, style code about appearance and HTML all about content.
+
+So instead of using js as above, you can do the following:
+Add a class into your styles.css
+
+  .big-title {
+      font-size: 10rem;
+      color: yellow;
+      font-family: cursive;
+  }
+
+Then add this class into your jQuery as follows:
+  
+  $("h1").addClass("big-title")
+  
+  $("button");
+
+> Just as you can add class, you can also remove class in the console log as follows:
+
+  $("h1").removeClass("big-title");
+
+> You can also add or remove multiple classes
+
+This in your styles.css
+  
+  .big-title {
+      font-size: 10rem;
+      color: yellow;
+      font-family: cursive;
+  }
+  
+  .margin-50 {
+      margin: 50px;
+  }
+
+This in your JavaScript
+
+  $("h1").addClass("big-title margin-50");
+  
+  $("button");
+
+> You can see whether or not a particular element has a class by console logging
+
+$("h1").hasClass("margin-50");
