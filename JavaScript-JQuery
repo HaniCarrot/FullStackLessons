@@ -75,3 +75,82 @@ This in your JavaScript
 > You can see whether or not a particular element has a class by console logging
 
 $("h1").hasClass("margin-50");
+
+> Manipulating Text with jQuery
+
+Do the following to add the new text (the text in parenthesis will be the new text)
+
+  $("h1").text("bye");
+
+  $("button").text("don't click me");
+
+Or you can add some html:
+
+  $("button").html("<em></em>");
+
+> Manipulating Attributes with jQuery
+
+Attributes are things like <img src="image"> & <a href="link"></a>
+
+  $("img").attr("src");
+
+Example
+
+ $("img").attr("");
+
+To get AND set:
+
+  $("a").attr("href", "https://www.yahoo.com");
+
+A class is also an HTML Attribute.
+
+> Add Event Listeners with jQuery
+
+  $("h1").click(function() {
+    $("h1").css("color", "purple");
+  });
+
+For buttons:
+
+  $("button").click(function() {
+    $("h1").css("color", "purple");
+  });
+
+For Keypress Event:
+
+  $("input").keypress(function(event) {
+    console.log(event.key);
+  });
+
+> Challenge: Update the code so whenever a key is pressed inside it shows in the h1
+
+  $(document).keypress(function(event) {
+    $("h1").text(event.key);
+  });
+
+> More flexible way to adding an event listener
+
+  $("h1").on("mouseover", function () {
+    $("h1").css("color", "purple");
+  });
+
+> Adding & Removing Elements with jQuery
+
+Using the following gives you control over where your code goes:
+  before() - adds before your parenthesis
+  after() - adds after your parenthesis
+  prepend() - adds just before the content of the h1, and after the opening tag
+  append() - adds after the content of the h1, but inside the h1 element
+
+You can also remove elements with the following:
+  $("button").remove();
+
+> Animations with jQuery
+
+Websites:
+
+jQuery Effect Methods: https://www.w3schools.com/jquery/jquery_ref_effects.asp
+jQuery Animate Slide: https://api.jquery.com/slideDown/
+
+  $("button").on("click", function() {
+    $("h1").animate({opacity:0.5}
