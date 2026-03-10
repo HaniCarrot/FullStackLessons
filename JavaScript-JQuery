@@ -155,4 +155,4 @@ jQuery Animate Slide: https://api.jquery.com/slideDown/
   $("button").on("click", function() {
     $("h1").animate({opacity:0.5}
 
->
+>>
