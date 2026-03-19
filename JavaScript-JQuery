@@ -156,3 +156,11 @@ jQuery Animate Slide: https://api.jquery.com/slideDown/
     $("h1").animate({opacity:0.5}
 
 >>
+
+4. Add jQuery to your website and test that it's successfully loaded by opening Chrome developer tools and typing $("h1")
+
+If successful, you should get something like this printed:
+  >w.fn.init [h1#level-title, prev0bject: w.fn.init(1)]
+
+If jQuery is not added, you will get this instead:
+ <h1 id="level-title">Press A Key To Start</h1>
