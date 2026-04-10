@@ -10,3 +10,12 @@ Why use Command Line?
 > Better control
 
 Can create hidden folders
+
+-------
+
+Command:
+
+$ls (List everything)
+$cd (Change Directory)
+$cd ~ (takes back to route directory)
+up & down button will take you to previous commands used
