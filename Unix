@@ -1,1 +1,12 @@
 
+
+BASH = Bourne Again Shell
+
+A CLI or Command Line Interpreter for the Unix system.
+
+Eg. Linux is Unix-like system
+
+Why use Command Line?
+> Better control
+
+Can create hidden folders
