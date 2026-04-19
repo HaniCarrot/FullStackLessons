@@ -13,9 +13,21 @@ Can create hidden folders
 
 -------
 
-Command:
+Commands:
 
 $ls (List everything)
 $cd (Change Directory)
 $cd ~ (takes back to route directory)
 up & down button will take you to previous commands used
+
+hold cntrl+a goes to beginning of command line
+hold cntrl+e goes to end of command line
+hold cntrl+u to clear entire line 
+
+mkdir (name) - creates new folder
+cd (name) - goes to that directory
+open -a (application) .app (name)
+rm (name of document) - deletes the text file
+pwd - print working directory, tells you you entire path & folder location
+rm -r (name) - removes the whole directory
+
