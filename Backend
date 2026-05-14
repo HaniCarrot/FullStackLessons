@@ -35,3 +35,25 @@ Learning to code, this is the % for professional developers:
   blazor 4.92%
   svelte 4.11%
 
+Node REPL
+
+  REPL = Read Eval Print Loop (not unique to node)
+  REPL is a computer environment where user i9nputs are read and evaluated, and then the results are returned to the user.
+  
+  TO activate REPL, type command "node" in terminal
+  
+  > .help
+  .break    Sometimes you get stuck, this gets you out
+  .clear    Alias for .break
+  .editor   Enter editor mode
+  .exit     Exit the REPL
+  .help     Print this help message
+  .load     Load JS from a file into the REPL session
+  .save     Save all evaluated commands in this REPL session to a file
+  Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+
+Native Modules
+
+  Native Modules are pre-installed things 
+  This page documents all native modules: https://nodejs.org/docs/latest-v18.x/api/index.html
+
