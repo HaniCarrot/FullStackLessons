@@ -58,3 +58,66 @@ Native Modules
   This page documents all native modules: https://nodejs.org/docs/latest-v18.x/api/index.html
 
 NPM - Node Package Manager
+
+  Open source Node Packages
+  "Community tool library"
+  https://www.npmjs.com/ -> Comes prebundled with node
+
+  I ran the below:
+
+          Hanna@Hani MINGW64 ~/Desktop/Udemy Course
+          $ cd "2.3 NPM"
+          
+          Hanna@Hani MINGW64 ~/Desktop/Udemy Course/2.3 NPM
+          $ npm init
+          This utility will walk you through creating a package.json file.
+          It only covers the most common items, and tries to guess sensible defaults.
+          
+          See `npm help init` for definitive documentation on these fields and exactly what they do.
+          
+          Use `npm install <pkg>` afterwards to install a package and save it as a dependency in the package.json file.
+          
+          Press ^C at any time to quit.
+          package name: (2.3-npm) learning-npm
+          version: (1.0.0) 
+          description: I'm learning about NPM
+          entry point: (index.js) 
+          test command: 
+          git repository: 
+          keywords: 
+          author: Hani
+          license: (ISC) 
+          type: (commonjs) 
+          About to write to C:\Users\Hanna\Desktop\Udemy Course\2.3 NPM\package.json:
+          
+          {
+            "name": "learning-npm",
+            "version": "1.0.0",
+            "description": "I'm learning about NPM",
+            "main": "index.js",
+            "scripts": {
+              "test": "echo \"Error: no test specified\" && exit 1"
+            },
+            "author": "Hani",
+            "license": "ISC",
+            "type": "commonjs"
+          }
+          
+          
+          Is this OK? (yes) 
+          
+  This creates a configuration file to then install and use NPM packages
+  To install npm package:
+      npm install <Something> OR npm i <Something>
+  <something> = the name of the package
+  For multiple:
+      npm install <Something> <Something> <Something> <Something> OR npm i <Something> <Something> <Something> <Something>
+
+  ECMA Script Modules
+
+    Since v12 of node moved on abit, so instead of using require we use import keyword
+    Provides standardized way of using JavaScirpt to be consistent on the front-end and back-end. Also improves behind the scenes things.
+    
+  Go into package.json > Below "main" comma, add a string called "type": "module",
+    
+
