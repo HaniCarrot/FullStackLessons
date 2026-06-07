@@ -119,5 +119,52 @@ NPM - Node Package Manager
     Provides standardized way of using JavaScirpt to be consistent on the front-end and back-end. Also improves behind the scenes things.
     
   Go into package.json > Below "main" comma, add a string called "type": "module",
-    
 
+Node Express
+
+  What is a port? Each port on a server is identified by a unique number
+    Windows - netstat command to write in the terminal to check which port is listening
+    netstat -ano | findstr "LISTENING"
+
+Request Vocab for HTTP requests
+
+  GET     - Request a resource from server (HTML website, piece of text, piece of data)
+  POST    - Sending a resource to server (information, form/email/password)
+  PUT     - Update method - Replace a resource with something
+  PATCH   - Update method - Patch a resource
+  DELETE  - Deletes a resource
+
+Example:
+  
+  import express from "express";
+  const app = express();
+  
+  app.get("/", (req, res) => {
+    res.send("Hello, World!");
+  });
+  
+  app.listen(3000, () => {
+    console.log("Server running on port 3000.");
+  });
+
+Example 2:
+
+  import express from "express";
+  const app = express();
+  const port = 3000;
+  
+  app.get("/", (req, res) => {
+      res.send("<h1>hello world</h1><p>welcome to my page</p>");
+  })
+  
+  app.get("/about", (req, res) => {
+      res.send("<h1>About me</h1><p> my name is hani banani</p>");
+  })
+  
+  app.get("/contact", (req, res) => {
+      res.send("<h1>Contact me here:</h1><p>email@email.com</p>");
+  })
+  
+  app.listen(port, () => {
+      console.log(`Server has started on port ${port}`);
+  });
