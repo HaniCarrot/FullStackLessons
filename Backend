@@ -169,6 +169,14 @@ Example 2:
       console.log(`Server has started on port ${port}`);
   });
 
+HTTP Return Code Cheat Sheet:
+
+  1**. Hold on
+  2**. Here you go
+  3**. Go away
+  4**. You fucked up
+  5**. I fucked up
+
 Postman
 
   
