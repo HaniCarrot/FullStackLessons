@@ -168,16 +168,26 @@ Example 2:
   app.listen(port, () => {
       console.log(`Server has started on port ${port}`);
   });
-
-HTTP Return Code Cheat Sheet:
-
-  1**. Hold on
-  2**. Here you go
-  3**. Go away
-  4**. You fucked up
-  5**. I fucked up
-
-Postman
-
   
+  HTTP Return Code Cheat Sheet:
+  
+    1**. Hold on
+    2**. Here you go
+    3**. Go away
+    4**. You fucked up
+    5**. I fucked up
+  
+  Postman - ?
+  
+  Middleware
 
+    For inbetween Server & Routes (Get,post,put,patch,delete)
+
+  What does it do?
+    -> Pre-process the request. Change aspects of requests or perform various actions
+    -> Can log the requests. IE: Time it took to come through, type, status, etc
+    -> Authentication before letting it through
+    -> Identify & process errors
+
+  Common middleware in Node & Express backend - "body-parser"
+    -> Commonly used to handle form data - such as login form on website
